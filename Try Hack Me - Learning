@@ -2,6 +2,9 @@ Introduction to SIEM
 
 Key Learnings and Takeaways
 
+Breaking down a log into several fields for ease of understanding is known as Parsing.
+Converting all the logs of various log sources into one consistent format is known as Normalization.
+
   Log Sources and Ingestion
 
     Windows Machine
@@ -30,4 +33,25 @@ Key Learnings and Takeaways
     Upload (files form computer)
     Monitor (files and ports on splunk platform instance, modular inputs for external data sources)
     Forward (data from splunk forwarder)
+
+  Alerting Process and Analysis
+    Detection rules are pretty much logical expressions set to be triggered.
+
+  How to create detection rule
+    Example use case: 
+      Adversaries use commands like whoami after the exploitation/privilege escalation phase. The following Fields will be helpful to include in the rule.
+      Log source: Identify the log source capturing the event logs
+      Event ID: Which Event ID is associated with Process Execution activity? In this case, Event ID 4688 will be helpful.
+      NewProcessName: Which process name will be helpful to include in the rule?
+
+      Rule: If Log Source is WinEventLog AND EventCode is 4688, and NewProcessName contains whoami, then Trigger an ALERT WHOAMI command Execution DETECTED
+
+  Alert investigation
+  Once an alert is triggered, the events/flows associated with the alert are examined, and the rule is checked to see which conditions are met
+  Some of the actions that are performed after the analysis are:
+    Alert is a False Positive. It may require tuning the rule to avoid similar False positives from occurring again.
+    Alert is a True Positive. Perform further investigation.
+    Contact the asset owner to inquire about the activity.
+    Suspicious activity is confirmed. (Actions like Isolate, Block etc.)
+
 Useful Command Reference
