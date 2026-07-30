@@ -3,11 +3,22 @@ between clients (like web browsers) and servers over the internet.  It operates 
 model where the client initiates a message to retrieve resources or trigger actions, and the server processes the 
 request and returns a response containing a status code, headers, and an optional body.
 
-Structure of an HTTP Request Every HTTP request consists of three main components:
+Structure of an HTTP Request 
+  
+  Every HTTP request consists of three main components:
 
-  Request Line: Specifies the HTTP method (verb), the resource path (URI/URL), and the protocol version (e.g., GET /index.html HTTP/1.1). 
-  Headers: Provide metadata such as the host domain, user-agent, accepted content types, and authorization tokens. 
-  Body: An optional section used to send data to the server, commonly found in POST, PUT, or PATCH requests. 
+    Request Line: Specifies the HTTP method (verb), the resource path (URI/URL), and the protocol version 
+      (e.g., GET /index.html HTTP/1.1). 
+    Headers: Provide metadata such as the host domain, user-agent, accepted content types, and authorization tokens.
+      Host: api.example.com
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+      Accept: application/json
+      Accept-Language: en-US,en;q=0.9
+      Accept-Encoding: gzip, deflate
+      Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+      Cookie: session_id=abc123; theme=dark
+      Connection: keep-alive
+    Body: An optional section used to send data to the server, commonly found in POST, PUT, or PATCH requests. 
   
 Common HTTP Methods Clients use specific methods to define the desired action on a resource:
 
@@ -19,8 +30,11 @@ Common HTTP Methods Clients use specific methods to define the desired action on
   HEAD: Retrieves only the headers of a resource without the body, useful for checking metadata. 
   OPTIONS: Describes the communication options available for a resource.
 
-HTTP vs. HTTPS Standard HTTP sends data in plain text, making it vulnerable to interception. HTTPS 
-(HTTP Secure) encrypts all communication using SSL/TLS, ensuring data confidentiality and integrity, which is essential for sensitive transactions like logins and payments. While HTTP relies on TCP for reliable delivery, HTTPS adds a security layer through a TLS handshake before data exchange begins
+HTTP vs. HTTPS 
+  Standard HTTP sends data in plain text, making it vulnerable to interception.
+  HTTPS (HTTP Secure) encrypts all communication using SSL/TLS, ensuring data confidentiality and integrity, 
+  which is essential for sensitive transactions like logins and payments. While HTTP relies on TCP for reliable delivery,
+  HTTPS adds a security layer through a TLS handshake before data exchange begins
 
 HTTP request
 HTTP response codes
