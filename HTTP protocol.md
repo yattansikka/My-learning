@@ -44,12 +44,16 @@ They are categorized into five classes based on the first digit:
 
   **1xx Informational**: The request was received and is being processed
     (e.g., 100 Continue, 101 Switching Protocols). 
+    
   **2xx Success:** The request was successfully received, understood, and accepted 
     (e.g., 200 OK, 201 Created, 204 No Content). 
+    
   **3xx Redirection**: Further action is required to complete the request, typically URL redirection 
     (e.g., 301 Moved Permanently, 302 Found, 304 Not Modified). 
+    
   **4xx Client Error**: The request contains bad syntax or cannot be fulfilled by the client 
     (e.g., 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found). 
+    
   **5xx Server Error**: The server failed to fulfill a valid request due to an internal error 
     (e.g., 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable). 
 
