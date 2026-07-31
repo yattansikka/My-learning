@@ -3,9 +3,9 @@ between clients (like web browsers) and servers over the internet.  It operates 
 model where the client initiates a message to retrieve resources or trigger actions, and the server processes the 
 request and returns a response containing a status code, headers, and an optional body.
 
-Structure of an HTTP Request 
+#Structure of an HTTP Request
   
-  Every HTTP request consists of three main components:
+  ##Every HTTP request consists of three main components:
 
     Request Line: Specifies the HTTP method (verb), the resource path (URI/URL), and the protocol version 
       (e.g., GET /index.html HTTP/1.1). 
@@ -20,14 +20,14 @@ Structure of an HTTP Request
       Connection: keep-alive
     Body: An optional section used to send data to the server, commonly found in POST, PUT, or PATCH requests. 
   
-Common HTTP Methods Clients use specific methods to define the desired action on a resource:
+##Common HTTP Methods Clients use specific methods to define the desired action on a resource:
 
-  GET: Retrieves data from the server; it is safe and idempotent. 
-  POST: Sends data to the server to create or update a resource; it is not idempotent. 
-  PUT: Completely replaces an existing resource or creates a new one; it is idempotent. 
-  DELETE: Removes a specified resource from the server; it is idempotent. 
-  PATCH: Applies partial modifications to a resource. 
-  HEAD: Retrieves only the headers of a resource without the body, useful for checking metadata. 
+  GET: Retrieves data from the server; it is safe and idempotent.  
+  POST: Sends data to the server to create or update a resource; it is not        idempotent.  
+  PUT: Completely replaces an existing resource or creates a new one; it is       idempotent.  
+  DELETE: Removes a specified resource from the server; it is idempotent.  
+  PATCH: Applies partial modifications to a resource.  
+  HEAD: Retrieves only the headers of a resource without the body, useful for checking metadata.  
   OPTIONS: Describes the communication options available for a resource.
 
 HTTP vs. HTTPS 
