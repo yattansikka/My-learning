@@ -35,6 +35,30 @@ Next Generation Firewall (NGFW)
   NGFWs have SSL/TLS decryption capabilities, which inspect the packets after decrypting them and correlate the data with the threat 
   intelligence feeds to make efficient decisions.
 
+Rules in Firewall
+A firewall gives you control over your network’s traffic, some customized rules can be defined for various networks. 
+  
+  The basic components of a firewall’s rule are described below:
+      Source address: The machine’s IP address that would originate the traffic.
+      Destination address: The machine’s IP address that would receive the data.
+      Port: The port number for the traffic.
+      Protocol: The protocol that would be used during the communication.
+      Action: This defines the action that would be taken upon identifying any traffic of this particular nature.
+      Direction: This field defines the rule’s applicability to incoming or outgoing traffic.
+
+Types of actions
+
+  Allow: indicates that the particular traffic defined inside the rule would be permitted.
+  Deny: the traffic defined inside the rule would be blocked and not permitted
+  Forward: redirects traffic to a different network segment using the forwarding rules created on the firewalls. 
+  This applies to the firewalls that provide routing functionality and act as gateways between different network segments.
+
+Directionality
+  Inbound: Rules are categorized as inbound rules when they are meant to be applied to incoming traffic only
+  Outbound: These rules are made for outgoing traffic only
+  Forward: Forwarding rules are created to forward specific traffic inside the network. 
+    For example, a forwarding rule can be created to forward the incoming HTTP (port 80) traffic to the web server located in your network.
+
 Introduction to SIEM
 
 Key Learnings and Takeaways
