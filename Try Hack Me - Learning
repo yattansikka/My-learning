@@ -59,6 +59,34 @@ Directionality
   Forward: Forwarding rules are created to forward specific traffic inside the network. 
     For example, a forwarding rule can be created to forward the incoming HTTP (port 80) traffic to the web server located in your network.
 
+Linux Firewall
+  Netfilter
+  Netfilter is the framework inside the Linux OS with core firewall functionalities, including packet filtering,
+  NAT, and connection tracking. This framework serves as the foundation for various firewall utilities available in Linux to control network traffic.
+
+    iptables
+    This is the most widely used utility in many Linux distributions. It uses the Netfilter framework that provides various functionalities to control network traffic.
+    nftables 
+    It is a successor to the “iptables” utility, with enhanced packet filtering and NAT capabilities. It is also based on the Netfilter framework.
+    firewalld
+    This utility also operates on the Netfilter framework and has predefined rule sets. It works differently from the others and comes with different pre-built network zone configurations.
+    ufw
+    ufw (Uncomplicated Firewall), as the name says, eliminates the complications of making rules in a complex syntax in “iptables”(or its successor) by giving you an easier interface
+    To check the status of the firewall, you could use the command: sudo ufw status
+    If it appears inactive, you can enable it using the following command: sudo ufw enable
+    To turn off the firewall, type “disable” instead of “enable” in the above command.
+  
+    Below is a rule created to allow all the outgoing connections from a Linux machine. 
+    The default in the command means that we are defining this policy as a default policy allowing all the outgoing traffic unless we define an outgoing traffic restriction on any specific application in a separate rule.
+    You can also make a rule to allow/deny traffic coming into your machine by replacing outgoing with incoming in the following command: sudo ufw default allow outgoing
+
+    To deny incoming traffic at any port in your system. Let's say that we want to block incoming SSH traffic. We can achieve this with the command ufw deny 22/tcp. 
+    We first specified the action, deny in this case; furthermore, we specified the port and the transport protocol, which is TCP port 22, or simply 22/tcp. sudo ufw deny 22/tcp
+
+    To list down all the active rules in a numbered order, you can use the following command: sudo ufw status numbered
+    To delete any rule, execute the following command with the rule number to delete: sudo ufw delete 2
+
+
 Introduction to SIEM
 
 Key Learnings and Takeaways
