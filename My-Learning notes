@@ -143,4 +143,34 @@ Converting all the logs of various log sources into one consistent format is kno
     Contact the asset owner to inquire about the activity.
     Suspicious activity is confirmed. (Actions like Isolate, Block etc.)
 
+IDS (Intrusion Detection System)
+An IDS’s main categorization depends on its deployment and detection modes.
+
+  Deployment modes
+    HIDS:
+      installed individually on hosts
+      provide visibility of host activities
+      challenging to manage in large networks as they are resource intensive and require management on each host
+
+    NIDS:
+      detect malicious activities within the network, regardless of specific hosts
+      monitor network traffic of all the hosts involved to detect suspicious activities
+      provides centralized view of all detections inside the whole network
+
+  Detection Modes
+    Signature based:
+      Each attack has its unique pattern known as signature. These signatures are preserved by the IDS in their database
+      unable to detect zero-day attacks (have no prior signatures)
+
+    Anomaly based
+      learns the normal behavior (baseline) of network or system
+      performs detections if there is any deviation
+      Can detect zero day
+      may generate a lot of false positives (can be reduced by mmanually defining the normal behavior)
+
+    Hybrid
+      combines signature based and anomaly based to leverage strength of each approach
+      
+      
+
 Useful Command Reference
