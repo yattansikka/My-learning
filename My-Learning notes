@@ -171,6 +171,24 @@ An IDS’s main categorization depends on its deployment and detection modes.
     Hybrid
       combines signature based and anomaly based to leverage strength of each approach
       
-      
+SNORT
+  Open source
+  use signature based and anomaly based detectoins
+  defined in rule files
+  comes with built-in rules files preinstalled in tool package
+  custom rules can be created and built in rules can be disabled
+
+  Modes of snort:
+    packet sniffer:
+      reads and displays network packets without performing analysis
+      main use case is network monitoring, analysis and diagnostics
+
+    packet logging
+      allows logging of network traffic as PCAP (standard packet capture format)
+      used to perform the root cause analysis
+
+    NIDS
+      monitors traffic in real time and applies rule files to identify anu known attack patterns
+      used to monitor systems/network to detect potential threats
 
 Useful Command Reference
